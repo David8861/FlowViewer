@@ -32,39 +32,45 @@
             Forward = new Button();
             Backward = new Button();
 
-
-
+            
             SuspendLayout();
             // 
             // Forward
             // 
-            Forward.Location = new Point(818, 475);
+            Forward.Location = new Point(845, 502);
             Forward.Name = "Forward";
             Forward.Size = new Size(120, 55);
             Forward.TabIndex = 0;
+            Forward.Text = "Forward";
+            Forward.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Backward
             // 
-            Backward.Location = new Point(12, 475);
+            Backward.Location = new Point(12, 502);
             Backward.Name = "Backward";
             Backward.Size = new Size(120, 55);
+            Backward.Text = "Backward";
             Backward.TabIndex = 0;
+            Backward.TextAlign = ContentAlignment.MiddleCenter;
+            
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(950, 550);
+            ClientSize = new Size(977, 569);
             Controls.Add(Forward);
             Controls.Add(Backward);
             Name = "Form1";
             Text = "Flow Viewer";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button Forward;
         private Button Backward;
+        
     }
 }
