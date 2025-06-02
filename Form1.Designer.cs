@@ -31,27 +31,31 @@
         {
             Forward = new Button();
             Backward = new Button();
-
-            
+            printDialog1 = new PrintDialog();
             SuspendLayout();
             // 
             // Forward
             // 
             Forward.Location = new Point(845, 502);
             Forward.Name = "Forward";
-            Forward.Size = new Size(120, 55);
+            Forward.Size = new Size(125, 55);
             Forward.TabIndex = 0;
             Forward.Text = "Forward";
-            Forward.TextAlign = ContentAlignment.MiddleCenter;
+            Forward.UseVisualStyleBackColor = true;
             // 
             // Backward
             // 
             Backward.Location = new Point(12, 502);
             Backward.Name = "Backward";
-            Backward.Size = new Size(120, 55);
-            Backward.Text = "Backward";
+            Backward.Size = new Size(125, 55);
             Backward.TabIndex = 0;
-            Backward.TextAlign = ContentAlignment.MiddleCenter;
+            Backward.Text = "Backward";
+            Backward.UseVisualStyleBackColor = true;
+            // 
+            // printDialog1
+            // 
+            printDialog1.UseEXDialog = true;
+            
             
             // 
             // Form1
@@ -61,16 +65,16 @@
             ClientSize = new Size(977, 569);
             Controls.Add(Forward);
             Controls.Add(Backward);
+            
             Name = "Form1";
             Text = "Flow Viewer";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Button Forward;
         private Button Backward;
-        
+        private PrintDialog printDialog1;
     }
 }
