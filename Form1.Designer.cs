@@ -43,7 +43,7 @@ namespace FlowViewer
             fileseperate = new ToolStripSeparator();
             toolSave = new ToolStripMenuItem();
             viewmenu = new ToolStripMenuItem();
-            fullscreen = new ToolStripMenuItem();
+            bigger = new ToolStripMenuItem();
             aboutmenu = new ToolStripMenuItem();
             topmenu.SuspendLayout();
             SuspendLayout();
@@ -115,19 +115,21 @@ namespace FlowViewer
             toolSave.Name = "toolSave";
             toolSave.Size = new Size(180, 22);
             toolSave.Text = "Save";
+            toolSave.Click += toolSave_Click;
             // 
             // viewmenu
             // 
-            viewmenu.DropDownItems.AddRange(new ToolStripItem[] { fullscreen });
+            viewmenu.DropDownItems.AddRange(new ToolStripItem[] { bigger });
             viewmenu.Name = "viewmenu";
             viewmenu.Size = new Size(44, 20);
             viewmenu.Text = "View";
             // 
             // fullscreen
             // 
-            fullscreen.Name = "fullscreen";
-            fullscreen.Size = new Size(180, 22);
-            fullscreen.Text = "Fullscreen";
+            bigger.Name = "Bigger";
+            bigger.Size = new Size(180, 22);
+            bigger.Text = "Big";
+            bigger.Click += bigger_Click;
             // 
             // aboutmenu
             // 
@@ -168,6 +170,6 @@ namespace FlowViewer
         private ToolStripMenuItem toolOpen;
         private ToolStripMenuItem toolSave;
         private ToolStripSeparator fileseperate;
-        private ToolStripMenuItem fullscreen;
+        private ToolStripMenuItem bigger;
     }
 }

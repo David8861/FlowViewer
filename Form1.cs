@@ -26,12 +26,18 @@ namespace FlowViewer
 
         }
 
-        private void fullscreen_Click(object sender, EventArgs e)
+        private void bigger_Click(object sender, EventArgs e)
         {
 
-            fullscreen.PerformClick();
-            
 
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1500, 800);
+
+
+        }
+
+        private void toolSave_Click(object sender, EventArgs e)
+        {
             
         }
     }
