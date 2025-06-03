@@ -102,38 +102,39 @@ namespace FlowViewer
             // toolOpen
             // 
             toolOpen.Name = "toolOpen";
-            toolOpen.Size = new Size(103, 22);
+            toolOpen.Size = new Size(180, 22);
             toolOpen.Text = "Open";
             // 
             // fileseperate
             // 
             fileseperate.Name = "fileseperate";
-            fileseperate.Size = new Size(100, 6);
+            fileseperate.Size = new Size(177, 6);
             // 
             // toolSave
             // 
             toolSave.Name = "toolSave";
-            toolSave.Size = new Size(103, 22);
+            toolSave.Size = new Size(180, 22);
             toolSave.Text = "Save";
             // 
-            // View Menu
+            // viewmenu
             // 
             viewmenu.DropDownItems.AddRange(new ToolStripItem[] { fullscreen });
-            viewmenu.Name = "View Menu";
+            viewmenu.Name = "viewmenu";
             viewmenu.Size = new Size(44, 20);
             viewmenu.Text = "View";
             // 
-            // Fullscreen
+            // fullscreen
             // 
-            fullscreen.Name = "Fullscreen";
-            fullscreen.Size = new Size(127, 22);
+            fullscreen.Name = "fullscreen";
+            fullscreen.Size = new Size(180, 22);
             fullscreen.Text = "Fullscreen";
             // 
-            // About
+            // aboutmenu
             // 
-            aboutmenu.Name = "About";
+            aboutmenu.Name = "aboutmenu";
             aboutmenu.Size = new Size(52, 20);
             aboutmenu.Text = "About";
+            aboutmenu.Click += aboutmenu_Click;
             // 
             // Form1
             // 
