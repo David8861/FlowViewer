@@ -38,37 +38,37 @@ namespace FlowViewer
             DrawingPen = new Button();
             Highlighter = new Button();
             topmenu = new MenuStrip();
-            toolStripMenuItem1 = new ToolStripMenuItem();
+            filemenu = new ToolStripMenuItem();
             toolOpen = new ToolStripMenuItem();
             fileseperate = new ToolStripSeparator();
             toolSave = new ToolStripMenuItem();
-            toolStripMenuItem2 = new ToolStripMenuItem();
-            toolStripMenuItem3 = new ToolStripMenuItem();
-            About = new ToolStripMenuItem();
+            viewmenu = new ToolStripMenuItem();
+            fullscreen = new ToolStripMenuItem();
+            aboutmenu = new ToolStripMenuItem();
             topmenu.SuspendLayout();
             SuspendLayout();
             // 
             // DocForward
             // 
-            DocForward.Location = new Point(845, 502);
+            DocForward.Location = new Point(905, 502);
             DocForward.Name = "DocForward";
-            DocForward.Size = new Size(125, 55);
+            DocForward.Size = new Size(60, 45);
             DocForward.TabIndex = 0;
-            DocForward.Text = "Forward";
+            DocForward.Text = ">";
             DocForward.UseVisualStyleBackColor = true;
             // 
             // DocBackward
             // 
             DocBackward.Location = new Point(12, 502);
             DocBackward.Name = "DocBackward";
-            DocBackward.Size = new Size(125, 55);
+            DocBackward.Size = new Size(60, 45);
             DocBackward.TabIndex = 0;
-            DocBackward.Text = "Backward";
+            DocBackward.Text = "<";
             DocBackward.UseVisualStyleBackColor = true;
             // 
             // DrawingPen
             // 
-            DrawingPen.Location = new Point(143, 512);
+            DrawingPen.Location = new Point(78, 507);
             DrawingPen.Name = "DrawingPen";
             DrawingPen.Size = new Size(60, 35);
             DrawingPen.TabIndex = 1;
@@ -76,7 +76,7 @@ namespace FlowViewer
             // 
             // Highlighter
             // 
-            Highlighter.Location = new Point(764, 512);
+            Highlighter.Location = new Point(824, 507);
             Highlighter.Name = "Highlighter";
             Highlighter.Size = new Size(75, 35);
             Highlighter.TabIndex = 2;
@@ -85,19 +85,19 @@ namespace FlowViewer
             // topmenu
             // 
             topmenu.AllowDrop = true;
-            topmenu.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2, About });
+            topmenu.Items.AddRange(new ToolStripItem[] { filemenu, viewmenu, aboutmenu });
             topmenu.Location = new Point(0, 0);
-            topmenu.Name = "menuStrip1";
+            topmenu.Name = "topmenu";
             topmenu.Size = new Size(977, 24);
             topmenu.TabIndex = 3;
             topmenu.Text = "Menu";
             // 
-            // toolStripMenuItem1
+            // filemenu
             // 
-            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolOpen, fileseperate, toolSave });
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(37, 20);
-            toolStripMenuItem1.Text = "File";
+            filemenu.DropDownItems.AddRange(new ToolStripItem[] { toolOpen, fileseperate, toolSave });
+            filemenu.Name = "filemenu";
+            filemenu.Size = new Size(37, 20);
+            filemenu.Text = "File";
             // 
             // toolOpen
             // 
@@ -116,24 +116,24 @@ namespace FlowViewer
             toolSave.Size = new Size(103, 22);
             toolSave.Text = "Save";
             // 
-            // toolStripMenuItem2
+            // View Menu
             // 
-            toolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem3 });
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(44, 20);
-            toolStripMenuItem2.Text = "View";
+            viewmenu.DropDownItems.AddRange(new ToolStripItem[] { fullscreen });
+            viewmenu.Name = "View Menu";
+            viewmenu.Size = new Size(44, 20);
+            viewmenu.Text = "View";
             // 
-            // toolStripMenuItem3
+            // Fullscreen
             // 
-            toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(127, 22);
-            toolStripMenuItem3.Text = "Fullscreen";
+            fullscreen.Name = "Fullscreen";
+            fullscreen.Size = new Size(127, 22);
+            fullscreen.Text = "Fullscreen";
             // 
             // About
             // 
-            About.Name = "About";
-            About.Size = new Size(52, 20);
-            About.Text = "About";
+            aboutmenu.Name = "About";
+            aboutmenu.Size = new Size(52, 20);
+            aboutmenu.Text = "About";
             // 
             // Form1
             // 
@@ -161,12 +161,12 @@ namespace FlowViewer
         private Button DrawingPen;
         private Button Highlighter;
         private MenuStrip topmenu;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem About;
+        private ToolStripMenuItem filemenu;
+        private ToolStripMenuItem viewmenu;
+        private ToolStripMenuItem aboutmenu;
         private ToolStripMenuItem toolOpen;
         private ToolStripMenuItem toolSave;
         private ToolStripSeparator fileseperate;
-        private ToolStripMenuItem toolStripMenuItem3;
+        private ToolStripMenuItem fullscreen;
     }
 }
