@@ -45,6 +45,7 @@ namespace FlowViewer
             viewmenu = new ToolStripMenuItem();
             bigger = new ToolStripMenuItem();
             smaller = new ToolStripMenuItem();
+            reset = new ToolStripMenuItem();
             aboutmenu = new ToolStripMenuItem();
             topmenu.SuspendLayout();
             SuspendLayout();
@@ -121,10 +122,17 @@ namespace FlowViewer
             // 
             // viewmenu
             // 
-            viewmenu.DropDownItems.AddRange(new ToolStripItem[] { bigger, smaller });
+            viewmenu.DropDownItems.AddRange(new ToolStripItem[] { bigger, smaller, reset });
             viewmenu.Name = "viewmenu";
             viewmenu.Size = new Size(44, 20);
             viewmenu.Text = "View";
+            //
+            // reset
+            //
+            reset.Name = "reset";
+            reset.Size = new Size();
+            reset.Text = "Reset";
+            reset.Click += reset_Click;
             // 
             // bigger
             // 
@@ -181,5 +189,6 @@ namespace FlowViewer
         private ToolStripSeparator fileseperate;
         private ToolStripMenuItem bigger;
         private ToolStripMenuItem smaller;
+        private ToolStripMenuItem reset;
     }
 }

@@ -53,6 +53,14 @@ namespace FlowViewer
             ClientSize = new Size(700, 300);
 
         }
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1000, 650);
+
+        }
         private void toolOpen_Click(object sender, EventArgs e)
         {
             
