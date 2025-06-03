@@ -39,7 +39,10 @@ namespace FlowViewer
             Highlighter = new Button();
             menuStrip1 = new MenuStrip();
             toolStripMenuItem1 = new ToolStripMenuItem();
+            toolStripTextBox1 = new ToolStripTextBox();
+            toolStripTextBox2 = new ToolStripTextBox();
             toolStripMenuItem2 = new ToolStripMenuItem();
+            toolStripTextBox3 = new ToolStripTextBox();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -89,15 +92,34 @@ namespace FlowViewer
             // 
             // toolStripMenuItem1
             // 
+            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripTextBox1, toolStripTextBox2 });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(125, 20);
-            toolStripMenuItem1.Text = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(37, 20);
+            toolStripMenuItem1.Text = "File";
+            // 
+            // toolStripTextBox1
+            // 
+            toolStripTextBox1.Name = "toolStripTextBox1";
+            toolStripTextBox1.Size = new Size(100, 23);
+            toolStripTextBox1.Text = "Open";
+            // 
+            // toolStripTextBox2
+            // 
+            toolStripTextBox2.Name = "toolStripTextBox2";
+            toolStripTextBox2.Size = new Size(100, 23);
+            toolStripTextBox2.Text = "Save";
             // 
             // toolStripMenuItem2
             // 
+            toolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { toolStripTextBox3});
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(125, 20);
-            toolStripMenuItem2.Text = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(44, 20);
+            toolStripMenuItem2.Text = "View";
+
+            toolStripTextBox3.Name = "viewbox1";
+            toolStripTextBox3.Size = new Size(100, 23);
+            toolStripTextBox3.Text = "Fullscreen";
+            
             // 
             // Form1
             // 
@@ -127,5 +149,10 @@ namespace FlowViewer
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
+        private ToolStripMenuItem Box1;
+        private ToolStripTextBox toolStripTextBox1;
+        private ToolStripTextBox toolStripTextBox2;
+        private ToolStripTextBox toolStripTextBox3;
+        private ToolStripTextBox viewTextBox1;
     }
 }
