@@ -44,7 +44,9 @@ namespace FlowViewer
             toolSave = new ToolStripMenuItem();
             viewmenu = new ToolStripMenuItem();
             bigger = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
             smaller = new ToolStripMenuItem();
+            toolStripSeparator2 = new ToolStripSeparator();
             reset = new ToolStripMenuItem();
             aboutmenu = new ToolStripMenuItem();
             topmenu.SuspendLayout();
@@ -55,9 +57,11 @@ namespace FlowViewer
             DocForward.Location = new Point(905, 502);
             DocForward.Name = "DocForward";
             DocForward.Size = new Size(60, 45);
-            DocForward.TabIndex = 0;
+            DocForward.TabIndex = 2;
             DocForward.Text = ">";
             DocForward.UseVisualStyleBackColor = true;
+            
+
             // 
             // DocBackward
             // 
@@ -75,6 +79,7 @@ namespace FlowViewer
             DrawingPen.Size = new Size(60, 35);
             DrawingPen.TabIndex = 1;
             DrawingPen.Text = "Pen";
+            DrawingPen.Click += DrawingPen_Click;
             // 
             // Highlighter
             // 
@@ -90,7 +95,7 @@ namespace FlowViewer
             topmenu.Items.AddRange(new ToolStripItem[] { filemenu, viewmenu, aboutmenu });
             topmenu.Location = new Point(0, 0);
             topmenu.Name = "topmenu";
-            topmenu.Size = new Size(977, 24);
+            topmenu.Size = new Size(1000, 24);
             topmenu.TabIndex = 3;
             topmenu.Text = "Menu";
             // 
@@ -104,49 +109,59 @@ namespace FlowViewer
             // toolOpen
             // 
             toolOpen.Name = "toolOpen";
-            toolOpen.Size = new Size(180, 22);
+            toolOpen.Size = new Size(103, 22);
             toolOpen.Text = "Open";
             toolOpen.Click += toolOpen_Click;
             // 
             // fileseperate
             // 
             fileseperate.Name = "fileseperate";
-            fileseperate.Size = new Size(177, 6);
+            fileseperate.Size = new Size(100, 6);
             // 
             // toolSave
             // 
             toolSave.Name = "toolSave";
-            toolSave.Size = new Size(180, 22);
+            toolSave.Size = new Size(103, 22);
             toolSave.Text = "Save";
             toolSave.Click += toolSave_Click;
             // 
             // viewmenu
             // 
-            viewmenu.DropDownItems.AddRange(new ToolStripItem[] { bigger, smaller, reset });
+            viewmenu.DropDownItems.AddRange(new ToolStripItem[] { bigger, toolStripSeparator1, smaller, toolStripSeparator2, reset });
             viewmenu.Name = "viewmenu";
             viewmenu.Size = new Size(44, 20);
             viewmenu.Text = "View";
-            //
-            // reset
-            //
-            reset.Name = "reset";
-            reset.Size = new Size();
-            reset.Text = "Reset";
-            reset.Click += reset_Click;
             // 
             // bigger
             // 
             bigger.Name = "bigger";
-            bigger.Size = new Size(180, 22);
+            bigger.Size = new Size(103, 22);
             bigger.Text = "Big";
             bigger.Click += bigger_Click;
             // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(100, 6);
+            // 
             // smaller
-            //
+            // 
             smaller.Name = "smaller";
-            smaller.Size = new Size(180, 22);
+            smaller.Size = new Size(103, 22);
             smaller.Text = "Small";
             smaller.Click += smaller_Click;
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(100, 6);
+            // 
+            // reset
+            // 
+            reset.Name = "reset";
+            reset.Size = new Size(103, 22);
+            reset.Text = "Reset";
+            reset.Click += reset_Click;
             // 
             // aboutmenu
             // 
@@ -190,5 +205,7 @@ namespace FlowViewer
         private ToolStripMenuItem bigger;
         private ToolStripMenuItem smaller;
         private ToolStripMenuItem reset;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripSeparator toolStripSeparator2;
     }
 }
