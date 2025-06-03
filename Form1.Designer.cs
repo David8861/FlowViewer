@@ -44,6 +44,7 @@ namespace FlowViewer
             toolSave = new ToolStripMenuItem();
             viewmenu = new ToolStripMenuItem();
             bigger = new ToolStripMenuItem();
+            smaller = new ToolStripMenuItem();
             aboutmenu = new ToolStripMenuItem();
             topmenu.SuspendLayout();
             SuspendLayout();
@@ -104,6 +105,7 @@ namespace FlowViewer
             toolOpen.Name = "toolOpen";
             toolOpen.Size = new Size(180, 22);
             toolOpen.Text = "Open";
+            toolOpen.Click += toolOpen_Click;
             // 
             // fileseperate
             // 
@@ -119,17 +121,24 @@ namespace FlowViewer
             // 
             // viewmenu
             // 
-            viewmenu.DropDownItems.AddRange(new ToolStripItem[] { bigger });
+            viewmenu.DropDownItems.AddRange(new ToolStripItem[] { bigger, smaller });
             viewmenu.Name = "viewmenu";
             viewmenu.Size = new Size(44, 20);
             viewmenu.Text = "View";
             // 
-            // fullscreen
+            // bigger
             // 
-            bigger.Name = "Bigger";
+            bigger.Name = "bigger";
             bigger.Size = new Size(180, 22);
             bigger.Text = "Big";
             bigger.Click += bigger_Click;
+            // 
+            // smaller
+            //
+            smaller.Name = "smaller";
+            smaller.Size = new Size(180, 22);
+            smaller.Text = "Small";
+            smaller.Click += smaller_Click;
             // 
             // aboutmenu
             // 
@@ -142,7 +151,7 @@ namespace FlowViewer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(977, 569);
+            ClientSize = new Size(1000, 650);
             Controls.Add(DocForward);
             Controls.Add(DocBackward);
             Controls.Add(DrawingPen);
@@ -171,5 +180,6 @@ namespace FlowViewer
         private ToolStripMenuItem toolSave;
         private ToolStripSeparator fileseperate;
         private ToolStripMenuItem bigger;
+        private ToolStripMenuItem smaller;
     }
 }

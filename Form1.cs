@@ -1,5 +1,8 @@
 using Microsoft.VisualBasic;
 using System.Drawing.Text;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 
 namespace FlowViewer
 {
@@ -33,12 +36,34 @@ namespace FlowViewer
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1500, 800);
 
-
         }
 
         private void toolSave_Click(object sender, EventArgs e)
         {
+
+
+
+        }
+
+
+        private void smaller_Click(object sender, EventArgs e)
+        {
+
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(700, 300);
+
+        }
+        private void toolOpen_Click(object sender, EventArgs e)
+        {
             
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.FileName = "Open";
+            openFileDialog.Title = "Open File";
+            openFileDialog.ShowDialog();
+            
+
+
         }
     }
 }
