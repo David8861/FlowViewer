@@ -38,6 +38,7 @@ namespace FlowViewer
             DrawingPen = new Button();
             Highlighter = new Button();
             menuStrip1 = new MenuStrip();
+            About = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             toolStripTextBox1 = new ToolStripTextBox();
             toolStripTextBox2 = new ToolStripTextBox();
@@ -79,11 +80,18 @@ namespace FlowViewer
             Highlighter.Size = new Size(75, 35);
             Highlighter.TabIndex = 2;
             Highlighter.Text = "Highlight";
+            //
+            // About Menu Item
+            //
+            About.Name = "About Menu Item";
+            About.Size = new Size(35, 20);
+            About.Text = "About";
+            
             // 
             // menuStrip1
             // 
             menuStrip1.AllowDrop = true;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2, About });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(977, 24);
@@ -149,10 +157,9 @@ namespace FlowViewer
         private MenuStrip menuStrip1;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem Box1;
+        private ToolStripMenuItem About;
         private ToolStripTextBox toolStripTextBox1;
         private ToolStripTextBox toolStripTextBox2;
         private ToolStripTextBox toolStripTextBox3;
-        private ToolStripTextBox viewTextBox1;
     }
 }
