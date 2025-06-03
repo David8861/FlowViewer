@@ -38,12 +38,13 @@ namespace FlowViewer
             DrawingPen = new Button();
             Highlighter = new Button();
             menuStrip1 = new MenuStrip();
-            About = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
-            toolStripTextBox1 = new ToolStripTextBox();
-            toolStripTextBox2 = new ToolStripTextBox();
+            toolOpen = new ToolStripMenuItem();
+            toolSave = new ToolStripMenuItem();
+            seperate = new ToolStripSeparator();
             toolStripMenuItem2 = new ToolStripMenuItem();
-            toolStripTextBox3 = new ToolStripTextBox();
+            toolStripMenuItem3 = new ToolStripMenuItem();
+            About = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -80,13 +81,6 @@ namespace FlowViewer
             Highlighter.Size = new Size(75, 35);
             Highlighter.TabIndex = 2;
             Highlighter.Text = "Highlight";
-            //
-            // About Menu Item
-            //
-            About.Name = "About Menu Item";
-            About.Size = new Size(35, 20);
-            About.Text = "About";
-            
             // 
             // menuStrip1
             // 
@@ -100,34 +94,46 @@ namespace FlowViewer
             // 
             // toolStripMenuItem1
             // 
-            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripTextBox1, toolStripTextBox2 });
+            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolOpen, seperate, toolSave });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Size = new Size(37, 20);
             toolStripMenuItem1.Text = "File";
             // 
-            // toolStripTextBox1
+            // toolOpen
             // 
-            toolStripTextBox1.Name = "toolStripTextBox1";
-            toolStripTextBox1.Size = new Size(100, 23);
-            toolStripTextBox1.Text = "Open";
+            toolOpen.Name = "toolOpen";
+            toolOpen.Size = new Size(103, 22);
+            toolOpen.Text = "Open";
             // 
-            // toolStripTextBox2
+            // toolSave
             // 
-            toolStripTextBox2.Name = "toolStripTextBox2";
-            toolStripTextBox2.Size = new Size(100, 23);
-            toolStripTextBox2.Text = "Save";
+            toolSave.Name = "toolSave";
+            toolSave.Size = new Size(103, 22);
+            toolSave.Text = "Save";
+            // 
+            // seperate
+            // 
+            seperate.Name = "seperate";
+            seperate.Size = new Size(100, 6);
             // 
             // toolStripMenuItem2
             // 
-            toolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { toolStripTextBox3});
+            toolStripMenuItem2.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem3 });
             toolStripMenuItem2.Name = "toolStripMenuItem2";
             toolStripMenuItem2.Size = new Size(44, 20);
             toolStripMenuItem2.Text = "View";
-
-            toolStripTextBox3.Name = "viewbox1";
-            toolStripTextBox3.Size = new Size(100, 23);
-            toolStripTextBox3.Text = "Fullscreen";
-            
+            // 
+            // toolStripMenuItem3
+            // 
+            toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(180, 22);
+            toolStripMenuItem3.Text = "Fullscreen";
+            // 
+            // About
+            // 
+            About.Name = "About";
+            About.Size = new Size(52, 20);
+            About.Text = "About";
             // 
             // Form1
             // 
@@ -158,8 +164,9 @@ namespace FlowViewer
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem About;
-        private ToolStripTextBox toolStripTextBox1;
-        private ToolStripTextBox toolStripTextBox2;
-        private ToolStripTextBox toolStripTextBox3;
+        private ToolStripMenuItem toolOpen;
+        private ToolStripMenuItem toolSave;
+        private ToolStripSeparator seperate;
+        private ToolStripMenuItem toolStripMenuItem3;
     }
 }
