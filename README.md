@@ -1,6 +1,6 @@
 # Flow Viewer
 
-## A document viewer created to be quick and low profile. 
+## A low profile document reader created to be quick. 
 
 #### Flow Viewer is able to open and read documents, with easy to use functions like annotations.
 
