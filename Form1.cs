@@ -18,21 +18,26 @@ namespace FlowViewer
         {
             
             windowformbox = new RichTextBox();
+            
             Form aboutwindowform = new Form();
 
             aboutwindowform.Show();
             aboutwindowform.Text = "About Flow";
             aboutwindowform.Location = new Point(300, 200);
             aboutwindowform.Size = new Size(600, 350);
-
+            
             aboutwindowform.Controls.Add(windowformbox);
-            windowformbox.Text = "Flow Viewer. All Rights Reserved.\n" +
-            "Flow Viewer is a quick, low-memory document reader. " +
-            "Open documents, Save documents, all through the File Menu. And under the view tab you can change your view to fit your preferences.\n";
+            windowformbox.Text = "Flow Viewer\n" +
+            "\nFlow Viewer is a quick, low-memory document reader. " +
+            "Open and save documents, all through the file menu. And under the view tab you can change your view to fit your preferences.\n" +
+            "\nFollow me on Github: github.com/David8861\n";
             windowformbox.ReadOnly = true;
-            windowformbox.Height = 300;
-            windowformbox.Width = 575;
+            windowformbox.Name = "About Flow";
+            windowformbox.Location = new Point(5, 5);
+            windowformbox.Height = 325;
+            windowformbox.Width = 570;
             windowformbox.WordWrap = true;
+            windowformbox.BackColor = SystemColors.Menu;
             windowformbox.Show();
         }
            
