@@ -33,6 +33,7 @@ namespace FlowViewer
 
         private void InitializeComponent()
         {
+            ScrollBar scroller = new VScrollBar();
             topmenu = new MenuStrip();
             filemenu = new ToolStripMenuItem();
             toolOpen = new ToolStripMenuItem();
@@ -41,16 +42,17 @@ namespace FlowViewer
             viewmenu = new ToolStripMenuItem();
             bigger = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
+            toolStripSeparator3 = new ToolStripSeparator();
             smaller = new ToolStripMenuItem();
             toolStripSeparator2 = new ToolStripSeparator();
             reset = new ToolStripMenuItem();
             aboutmenu = new ToolStripMenuItem();
             menuStrip1 = new MenuStrip();
-            toolStripMenuItem1 = new ToolStripMenuItem();
-            toolStripMenuItem2 = new ToolStripMenuItem();
-            toolStripMenuItem3 = new ToolStripMenuItem();
-            toolStripMenuItem4 = new ToolStripMenuItem();
-            toolStripMenuItem5 = new ToolStripMenuItem();
+            toolsmenu = new ToolStripMenuItem();
+            highlight = new ToolStripMenuItem();
+            drawpen = new ToolStripMenuItem();
+            forwardfunction = new ToolStripMenuItem();
+            backwardfunction = new ToolStripMenuItem();
             topmenu.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -64,6 +66,11 @@ namespace FlowViewer
             topmenu.Size = new Size(1000, 24);
             topmenu.TabIndex = 3;
             topmenu.Text = "Menu";
+            //
+            // Scroll Bar
+            //
+            scroller.Show();
+            scroller.Enabled = true;
             // 
             // filemenu
             // 
@@ -121,7 +128,13 @@ namespace FlowViewer
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
             toolStripSeparator2.Size = new Size(110, 6);
+            //
+            // Tool Strip 3
+            //
             // 
+            toolStripSeparator3.Name = "Tool Strip 3";
+            toolStripSeparator3.Size = new Size(110, 6);
+            //
             // reset
             // 
             reset.Name = "reset";
@@ -139,49 +152,50 @@ namespace FlowViewer
             // menuStrip1
             // 
             menuStrip1.Dock = DockStyle.Bottom;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem4, toolStripMenuItem5 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolsmenu, forwardfunction, backwardfunction });
             menuStrip1.Location = new Point(0, 617);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1000, 33);
             menuStrip1.TabIndex = 4;
-            menuStrip1.Text = "menuStrip1";
+            menuStrip1.Text = "Dock";
             // 
-            // toolStripMenuItem1
+            // Tools
             // 
-            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, toolStripMenuItem3 });
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Padding = new Padding(10, 10, 10, 0);
-            toolStripMenuItem1.Size = new Size(59, 29);
-            toolStripMenuItem1.Text = "Tools";
+            toolsmenu.DropDownItems.AddRange(new ToolStripItem[] { highlight, toolStripSeparator3, drawpen });
+            toolsmenu.Name = "Tools";
+            toolsmenu.Padding = new Padding(0, 15, 0, 15);
+            toolsmenu.Size = new Size(59, 29);
+            toolsmenu.Text = "Tools";
+            toolsmenu.Alignment = ToolStripItemAlignment.Left;
             // 
             // toolStripMenuItem2
             // 
-            toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(134, 22);
-            toolStripMenuItem2.Text = "Highlighter";
+            highlight.Name = "toolStripMenuItem2";
+            highlight.Size = new Size(134, 22);
+            highlight.Text = "Highlighter";
             // 
             // toolStripMenuItem3
             // 
-            toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(134, 22);
-            toolStripMenuItem3.Text = "Pen";
+            drawpen.Name = "toolStripMenuItem3";
+            drawpen.Size = new Size(134, 22);
+            drawpen.Text = "Pen";
             // 
             // toolStripMenuItem4
             // 
-            toolStripMenuItem4.Alignment = ToolStripItemAlignment.Right;
-            toolStripMenuItem4.Name = "toolStripMenuItem4";
-            toolStripMenuItem4.Padding = new Padding(10, 0, 10, 0);
-            toolStripMenuItem4.Size = new Size(74, 29);
-            toolStripMenuItem4.Text = "Forward";
+            forwardfunction.Alignment = ToolStripItemAlignment.Right;
+            forwardfunction.Name = "Forward Function";
+            forwardfunction.Padding = new Padding(10, 0, 10, 0);
+            forwardfunction.Size = new Size(74, 29);
+            forwardfunction.Text = "Forward";
             // 
             // toolStripMenuItem5
             // 
-            toolStripMenuItem5.Alignment = ToolStripItemAlignment.Right;
-            toolStripMenuItem5.BackgroundImageLayout = ImageLayout.None;
-            toolStripMenuItem5.Name = "toolStripMenuItem5";
-            toolStripMenuItem5.Padding = new Padding(10, 0, 10, 0);
-            toolStripMenuItem5.Size = new Size(56, 29);
-            toolStripMenuItem5.Text = "Back";
+            backwardfunction.Alignment = ToolStripItemAlignment.Right;
+            backwardfunction.BackgroundImageLayout = ImageLayout.None;
+            backwardfunction.Name = "Backward Function";
+            backwardfunction.Padding = new Padding(10, 0, 10, 0);
+            backwardfunction.Size = new Size(56, 29);
+            backwardfunction.Text = "Back";
             // 
             // Form1
             // 
@@ -203,7 +217,7 @@ namespace FlowViewer
 
         #endregion
 
-
+        private VScrollBar scroller;
         private MenuStrip topmenu;
         private ToolStripMenuItem filemenu;
         private ToolStripMenuItem viewmenu;
@@ -216,11 +230,12 @@ namespace FlowViewer
         private ToolStripMenuItem reset;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripSeparator toolStripSeparator2;
+        private ToolStripSeparator toolStripSeparator3;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem toolStripMenuItem1;
-        private ToolStripMenuItem toolStripMenuItem2;
-        private ToolStripMenuItem toolStripMenuItem3;
-        private ToolStripMenuItem toolStripMenuItem4;
-        private ToolStripMenuItem toolStripMenuItem5;
+        private ToolStripMenuItem toolsmenu;
+        private ToolStripMenuItem highlight;
+        private ToolStripMenuItem drawpen;
+        private ToolStripMenuItem forwardfunction;
+        private ToolStripMenuItem backwardfunction;
     }
 }
