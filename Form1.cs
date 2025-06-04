@@ -15,7 +15,8 @@ namespace FlowViewer
             InitializeComponent();
 
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            Icon = (Icon)resources.GetObject("$this.Icon");
+            
+        
         }
 
         private RichTextBox windowformbox;
@@ -38,7 +39,7 @@ namespace FlowViewer
             windowformbox.Text = "Flow Viewer\n" +
             "\nFlow Viewer is a quick, low-memory document reader. " +
             "Open and save documents, all through the file menu. And under the view tab you can change your view to fit your preferences.\n" +
-            "\nFollow me on Github: github.com/David8861\n";
+            "\nFollow me on Github: github.com/David8861.\n";
             windowformbox.ReadOnly = true;
             windowformbox.Name = "About Flow";
             windowformbox.Location = new Point(5, 5);
@@ -63,6 +64,13 @@ namespace FlowViewer
         {
 
 
+
+        }
+        private void toolExit_Click(object sender, EventArgs e)
+        {
+
+            Application.Exit();
+
         }
 
 
@@ -86,12 +94,15 @@ namespace FlowViewer
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            openFileDialog.Title = "Open File";
+            openFileDialog.Title = "Open Document";
+            openFileDialog.Multiselect = false;
+            openFileDialog.SelectReadOnly = false;
+            openFileDialog.DefaultExt = ".pdf";
             openFileDialog.ShowDialog();
-
-
+            
 
         }
+        
 
         
     }
