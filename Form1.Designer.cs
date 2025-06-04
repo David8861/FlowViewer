@@ -151,20 +151,20 @@ namespace FlowViewer
             toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2, toolStripMenuItem3 });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Padding = new Padding(10, 10, 10, 0);
-            toolStripMenuItem1.Size = new Size(56, 29);
-            toolStripMenuItem1.Text = "Back";
+            toolStripMenuItem1.Size = new Size(59, 29);
+            toolStripMenuItem1.Text = "Tools";
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(180, 22);
-            toolStripMenuItem2.Text = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(134, 22);
+            toolStripMenuItem2.Text = "Highlighter";
             // 
             // toolStripMenuItem3
             // 
             toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(180, 22);
-            toolStripMenuItem3.Text = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(134, 22);
+            toolStripMenuItem3.Text = "Pen";
             // 
             // toolStripMenuItem4
             // 
@@ -177,10 +177,11 @@ namespace FlowViewer
             // toolStripMenuItem5
             // 
             toolStripMenuItem5.Alignment = ToolStripItemAlignment.Right;
+            toolStripMenuItem5.BackgroundImageLayout = ImageLayout.None;
             toolStripMenuItem5.Name = "toolStripMenuItem5";
             toolStripMenuItem5.Padding = new Padding(10, 0, 10, 0);
-            toolStripMenuItem5.Size = new Size(59, 29);
-            toolStripMenuItem5.Text = "Tools";
+            toolStripMenuItem5.Size = new Size(56, 29);
+            toolStripMenuItem5.Text = "Back";
             // 
             // Form1
             // 
