@@ -33,10 +33,7 @@ namespace FlowViewer
 
         private void InitializeComponent()
         {
-            DocForward = new Button();
-            DocBackward = new Button();
-            DrawingPen = new Button();
-            Highlighter = new Button();
+            
             topmenu = new MenuStrip();
             filemenu = new ToolStripMenuItem();
             toolOpen = new ToolStripMenuItem();
@@ -51,43 +48,8 @@ namespace FlowViewer
             aboutmenu = new ToolStripMenuItem();
             topmenu.SuspendLayout();
             SuspendLayout();
-            // 
-            // DocForward
-            // 
-            DocForward.Location = new Point(905, 502);
-            DocForward.Name = "DocForward";
-            DocForward.Size = new Size(60, 45);
-            DocForward.TabIndex = 2;
-            DocForward.Text = ">";
-            DocForward.UseVisualStyleBackColor = true;
             
 
-            // 
-            // DocBackward
-            // 
-            DocBackward.Location = new Point(12, 502);
-            DocBackward.Name = "DocBackward";
-            DocBackward.Size = new Size(60, 45);
-            DocBackward.TabIndex = 0;
-            DocBackward.Text = "<";
-            DocBackward.UseVisualStyleBackColor = true;
-            // 
-            // DrawingPen
-            // 
-            DrawingPen.Location = new Point(78, 507);
-            DrawingPen.Name = "DrawingPen";
-            DrawingPen.Size = new Size(60, 35);
-            DrawingPen.TabIndex = 1;
-            DrawingPen.Text = "Pen";
-            DrawingPen.Click += DrawingPen_Click;
-            // 
-            // Highlighter
-            // 
-            Highlighter.Location = new Point(824, 507);
-            Highlighter.Name = "Highlighter";
-            Highlighter.Size = new Size(75, 35);
-            Highlighter.TabIndex = 2;
-            Highlighter.Text = "Highlight";
             // 
             // topmenu
             // 
@@ -136,7 +98,7 @@ namespace FlowViewer
             // 
             bigger.Name = "bigger";
             bigger.Size = new Size(103, 22);
-            bigger.Text = "Big";
+            bigger.Text = "Bigger";
             bigger.Click += bigger_Click;
             // 
             // toolStripSeparator1
@@ -148,7 +110,7 @@ namespace FlowViewer
             // 
             smaller.Name = "smaller";
             smaller.Size = new Size(103, 22);
-            smaller.Text = "Small";
+            smaller.Text = "Smaller";
             smaller.Click += smaller_Click;
             // 
             // toolStripSeparator2
@@ -175,10 +137,6 @@ namespace FlowViewer
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1000, 650);
-            Controls.Add(DocForward);
-            Controls.Add(DocBackward);
-            Controls.Add(DrawingPen);
-            Controls.Add(Highlighter);
             Controls.Add(topmenu);
             MainMenuStrip = topmenu;
             Name = "Form1";
@@ -191,10 +149,7 @@ namespace FlowViewer
 
         #endregion
 
-        private Button DocForward;
-        private Button DocBackward;
-        private Button DrawingPen;
-        private Button Highlighter;
+        
         private MenuStrip topmenu;
         private ToolStripMenuItem filemenu;
         private ToolStripMenuItem viewmenu;
