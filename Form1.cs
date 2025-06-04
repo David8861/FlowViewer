@@ -1,5 +1,7 @@
+using FlowViewer.Properties;
 using System;
 using System.Drawing.Text;
+using System.Resources;
 
 
 namespace FlowViewer
@@ -11,6 +13,9 @@ namespace FlowViewer
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         {
             InitializeComponent();
+
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            Icon = (Icon)resources.GetObject("$this.Icon");
         }
 
         private RichTextBox windowformbox;
@@ -22,10 +27,13 @@ namespace FlowViewer
             Form aboutwindowform = new Form();
 
             aboutwindowform.Show();
+            
             aboutwindowform.Text = "About Flow";
             aboutwindowform.Location = new Point(300, 200);
             aboutwindowform.Size = new Size(600, 350);
-            
+            aboutwindowform.ShowIcon = true;
+            aboutwindowform.Icon = Icon;
+
             aboutwindowform.Controls.Add(windowformbox);
             windowformbox.Text = "Flow Viewer\n" +
             "\nFlow Viewer is a quick, low-memory document reader. " +
