@@ -1,15 +1,23 @@
+using System;
+using System.Drawing.Text;
+
+
 namespace FlowViewer
 {
     public partial class Form1 : Form
     {
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         public Form1()
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         {
             InitializeComponent();
         }
 
+        private RichTextBox windowformbox;
         private void aboutmenu_Click(object sender, EventArgs e)
         {
-
+            
+            windowformbox = new RichTextBox();
             Form aboutwindowform = new Form();
 
             aboutwindowform.Show();
@@ -17,8 +25,17 @@ namespace FlowViewer
             aboutwindowform.Location = new Point(300, 200);
             aboutwindowform.Size = new Size(600, 350);
 
-
+            aboutwindowform.Controls.Add(windowformbox);
+            windowformbox.Text = "Flow Viewer. All Rights Reserved.\n" +
+            "Flow Viewer is a quick, low-memory document reader. " +
+            "Open documents, Save documents, all through the File Menu. And under the view tab you can change your view to fit your preferences.\n";
+            windowformbox.ReadOnly = true;
+            windowformbox.Height = 300;
+            windowformbox.Width = 575;
+            windowformbox.WordWrap = true;
+            windowformbox.Show();
         }
+           
 
         private void bigger_Click(object sender, EventArgs e)
         {

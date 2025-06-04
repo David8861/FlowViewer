@@ -66,11 +66,6 @@ namespace FlowViewer
             topmenu.Size = new Size(1000, 24);
             topmenu.TabIndex = 3;
             topmenu.Text = "Menu";
-            //
-            // Scroll Bar
-            //
-            scroller.Show();
-            scroller.Enabled = true;
             // 
             // filemenu
             // 
