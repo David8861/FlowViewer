@@ -1,7 +1,11 @@
 using FlowViewer.Properties;
 using System;
 using System.Drawing.Text;
+using System.IO;
 using System.Resources;
+using System.Security;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace FlowViewer
@@ -15,20 +19,20 @@ namespace FlowViewer
             InitializeComponent();
 
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            
-        
+
+
         }
 
         private RichTextBox windowformbox;
         private void aboutmenu_Click(object sender, EventArgs e)
         {
-            
+
             windowformbox = new RichTextBox();
-            
+
             Form aboutwindowform = new Form();
 
             aboutwindowform.Show();
-            
+
             aboutwindowform.Text = "About Flow";
             aboutwindowform.Location = new Point(300, 200);
             aboutwindowform.Size = new Size(600, 350);
@@ -49,7 +53,7 @@ namespace FlowViewer
             windowformbox.BackColor = SystemColors.Menu;
             windowformbox.Show();
         }
-           
+
 
         private void bigger_Click(object sender, EventArgs e)
         {
@@ -92,18 +96,41 @@ namespace FlowViewer
         private void toolOpen_Click(object sender, EventArgs e)
         {
 
-            OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            openFileDialog.Title = "Open Document";
+            openFileDialog.Title = "Open Doc";
             openFileDialog.Multiselect = false;
             openFileDialog.SelectReadOnly = false;
             openFileDialog.DefaultExt = ".pdf";
-            openFileDialog.ShowDialog();
-            
+            DialogResult = openFileDialog.ShowDialog();
 
+            ScrollBars = new ScrollBars();
+            ScrollBars = ScrollBars.Vertical;
         }
-        
+
+        private void SelectButton_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog.ShowDialog() == DialogResult)
+            {
+                try
+                {
+                    var sr = new StreamReader(openFileDialog.FileName);
+                    var data = sr.ReadToEnd();
+                    
+                }
+                catch (SecurityException ex)
+                {
+                    MessageBox.Show($"Security error.\n\nError message: {ex.Message}\n\n" +
+                    $"Details:\n\n{ex.StackTrace}");
+                }
+            }
+        }
 
         
+        private System.Windows.Forms.TextBox mytext;
+        OpenFileDialog openFileDialog = new OpenFileDialog();
+        
+
+        public ScrollBars ScrollBars { get; private set; }
+        public DialogResult SelectButton { get; private set; }
     }
 }
