@@ -53,8 +53,6 @@ namespace FlowViewer
             toolsmenu = new ToolStripMenuItem();
             highlight = new ToolStripMenuItem();
             drawpen = new ToolStripMenuItem();
-            forwardfunction = new ToolStripMenuItem();
-            backwardfunction = new ToolStripMenuItem();
             topmenu.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -161,7 +159,7 @@ namespace FlowViewer
             // menuStrip1
             // 
             menuStrip1.Dock = DockStyle.Bottom;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { toolsmenu, forwardfunction, backwardfunction });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { toolsmenu });
             menuStrip1.Location = new Point(0, 597);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(1000, 53);
@@ -188,23 +186,7 @@ namespace FlowViewer
             drawpen.Name = "drawpen";
             drawpen.Size = new Size(180, 22);
             drawpen.Text = "Pen";
-            // 
-            // forwardfunction
-            // 
-            forwardfunction.Alignment = ToolStripItemAlignment.Right;
-            forwardfunction.Name = "forwardfunction";
-            forwardfunction.Padding = new Padding(10, 0, 10, 0);
-            forwardfunction.Size = new Size(74, 49);
-            forwardfunction.Text = "Forward";
-            // 
-            // backwardfunction
-            // 
-            backwardfunction.Alignment = ToolStripItemAlignment.Right;
-            backwardfunction.BackgroundImageLayout = ImageLayout.None;
-            backwardfunction.Name = "backwardfunction";
-            backwardfunction.Padding = new Padding(10, 0, 10, 0);
-            backwardfunction.Size = new Size(56, 49);
-            backwardfunction.Text = "Back";
+            
             // 
             // Form1
             // 
@@ -247,7 +229,6 @@ namespace FlowViewer
         private ToolStripMenuItem toolsmenu;
         private ToolStripMenuItem highlight;
         private ToolStripMenuItem drawpen;
-        private ToolStripMenuItem forwardfunction;
-        private ToolStripMenuItem backwardfunction;
+        
     }
 }
