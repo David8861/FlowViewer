@@ -77,33 +77,35 @@ namespace FlowViewer
             // 
             // toolOpen
             // 
+            toolOpen.Image = (Image)resources.GetObject("toolOpen.Image");
             toolOpen.Name = "toolOpen";
-            toolOpen.Size = new Size(103, 22);
+            toolOpen.Size = new Size(180, 22);
             toolOpen.Text = "Open";
             toolOpen.Click += toolOpen_Click;
-            
             // 
             // fileseperate
             // 
             fileseperate.Name = "fileseperate";
-            fileseperate.Size = new Size(100, 6);
+            fileseperate.Size = new Size(177, 6);
             // 
             // toolSave
             // 
+            toolSave.Image = (Image)resources.GetObject("toolSave.Image");
             toolSave.Name = "toolSave";
-            toolSave.Size = new Size(103, 22);
+            toolSave.Size = new Size(180, 22);
             toolSave.Text = "Save";
             toolSave.Click += toolSave_Click;
             // 
             // fileseperate2
             // 
             fileseperate2.Name = "fileseperate2";
-            fileseperate2.Size = new Size(100, 6);
+            fileseperate2.Size = new Size(177, 6);
             // 
             // toolExit
             // 
+            toolExit.Image = (Image)resources.GetObject("toolExit.Image");
             toolExit.Name = "toolExit";
-            toolExit.Size = new Size(103, 22);
+            toolExit.Size = new Size(180, 22);
             toolExit.Text = "Exit";
             toolExit.Click += toolExit_Click;
             // 
@@ -116,8 +118,9 @@ namespace FlowViewer
             // 
             // bigger
             // 
+            bigger.Image = (Image)resources.GetObject("bigger.Image");
             bigger.Name = "bigger";
-            bigger.Size = new Size(113, 22);
+            bigger.Size = new Size(180, 22);
             bigger.Text = "Bigger";
             bigger.Click += bigger_Click;
             // 
@@ -128,8 +131,9 @@ namespace FlowViewer
             // 
             // smaller
             // 
+            smaller.Image = (Image)resources.GetObject("smaller.Image");
             smaller.Name = "smaller";
-            smaller.Size = new Size(113, 22);
+            smaller.Size = new Size(180, 22);
             smaller.Text = "Smaller";
             smaller.Click += smaller_Click;
             // 
@@ -155,7 +159,7 @@ namespace FlowViewer
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(177, 6);
+            toolStripSeparator3.Size = new Size(131, 6);
             // 
             // menuStrip1
             // 
@@ -174,20 +178,18 @@ namespace FlowViewer
             toolsmenu.Padding = new Padding(0, 15, 0, 15);
             toolsmenu.Size = new Size(39, 49);
             toolsmenu.Text = "Tools";
-            
             // 
             // highlight
             // 
             highlight.Name = "highlight";
-            highlight.Size = new Size(180, 22);
+            highlight.Size = new Size(134, 22);
             highlight.Text = "Highlighter";
             // 
             // drawpen
             // 
             drawpen.Name = "drawpen";
-            drawpen.Size = new Size(180, 22);
+            drawpen.Size = new Size(134, 22);
             drawpen.Text = "Pen";
-            
             // 
             // Form1
             // 
