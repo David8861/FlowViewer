@@ -1,8 +1,8 @@
-# Flow Viewer
+## Flow Viewer
 
-## A clean document reader, created to be fast. 
+### A clean document reader, created to be fast. 
 
-#### Flow Viewer is able to open and read documents, with easy to use functions like annotations.
+##### Flow Viewer is able to open and read documents, with easy to use functions like annotations.
 
 #### Latest Update:
 
