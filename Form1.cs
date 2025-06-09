@@ -115,6 +115,9 @@ namespace FlowViewer
                 try
                 {
                     var sr = new StreamReader(openFileDialog.FileName);
+
+                    var data = sr.ReadToEnd();
+                    
                     
 
 

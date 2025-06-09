@@ -81,6 +81,7 @@ namespace FlowViewer
             toolOpen.Size = new Size(103, 22);
             toolOpen.Text = "Open";
             toolOpen.Click += toolOpen_Click;
+            
             // 
             // fileseperate
             // 
