@@ -1,5 +1,6 @@
 using FlowViewer.Properties;
 using System;
+using System.Drawing.Design;
 using System.Drawing.Text;
 using System.IO;
 using System.Resources;
@@ -52,6 +53,19 @@ namespace FlowViewer
             windowformbox.WordWrap = true;
             windowformbox.BackColor = SystemColors.Menu;
             windowformbox.Show();
+        }
+
+        private void drawpen_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void highlight_Click(object sender, EventArgs e)
+        {
+
+
+
         }
 
 
