@@ -6,4 +6,4 @@
 
 ### Latest Update:
 
-#### Created a top menu to access opening files and saving. Working on their functions.
+#### Created a top menu to access opening files and saving.
