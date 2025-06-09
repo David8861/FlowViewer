@@ -56,9 +56,9 @@ namespace FlowViewer
             topmenu.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // topmenu
-            // 
+            
+
+
             topmenu.AllowDrop = true;
             topmenu.BackgroundImage = (Image)resources.GetObject("topmenu.BackgroundImage");
             topmenu.BackgroundImageLayout = ImageLayout.Stretch;
