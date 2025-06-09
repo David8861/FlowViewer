@@ -60,11 +60,13 @@ namespace FlowViewer
             // topmenu
             // 
             topmenu.AllowDrop = true;
-            topmenu.BackColor = Color.SkyBlue;
+            topmenu.BackgroundImage = (Image)resources.GetObject("topmenu.BackgroundImage");
+            topmenu.BackgroundImageLayout = ImageLayout.Stretch;
             topmenu.Items.AddRange(new ToolStripItem[] { filemenu, viewmenu, aboutmenu });
             topmenu.Location = new Point(0, 0);
             topmenu.Name = "topmenu";
-            topmenu.Size = new Size(1000, 24);
+            topmenu.Padding = new Padding(10);
+            topmenu.Size = new Size(1000, 39);
             topmenu.TabIndex = 3;
             topmenu.Text = "Menu";
             // 
@@ -72,8 +74,9 @@ namespace FlowViewer
             // 
             filemenu.DropDownItems.AddRange(new ToolStripItem[] { toolOpen, fileseperate, toolSave, fileseperate2, toolExit });
             filemenu.Name = "filemenu";
-            filemenu.Size = new Size(37, 20);
+            filemenu.Size = new Size(37, 19);
             filemenu.Text = "File";
+            filemenu.ForeColor = System.Drawing.Color.White;
             // 
             // toolOpen
             // 
@@ -113,8 +116,9 @@ namespace FlowViewer
             // 
             viewmenu.DropDownItems.AddRange(new ToolStripItem[] { bigger, toolStripSeparator1, smaller, toolStripSeparator2, reset });
             viewmenu.Name = "viewmenu";
-            viewmenu.Size = new Size(44, 20);
+            viewmenu.Size = new Size(44, 19);
             viewmenu.Text = "View";
+            viewmenu.ForeColor = System.Drawing.Color.White;
             // 
             // bigger
             // 
@@ -127,7 +131,7 @@ namespace FlowViewer
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(110, 6);
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // smaller
             // 
@@ -140,20 +144,22 @@ namespace FlowViewer
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(110, 6);
+            toolStripSeparator2.Size = new Size(177, 6);
             // 
             // reset
             // 
             reset.Name = "reset";
-            reset.Size = new Size(113, 22);
+            reset.Size = new Size(180, 22);
             reset.Text = "Reset";
             reset.Click += reset_Click;
             // 
             // aboutmenu
             // 
+            aboutmenu.Alignment = ToolStripItemAlignment.Right;
             aboutmenu.Name = "aboutmenu";
-            aboutmenu.Size = new Size(52, 20);
+            aboutmenu.Size = new Size(52, 19);
             aboutmenu.Text = "About";
+            aboutmenu.ForeColor = System.Drawing.Color.White;
             aboutmenu.Click += aboutmenu_Click;
             // 
             // toolStripSeparator3
@@ -165,9 +171,10 @@ namespace FlowViewer
             // 
             menuStrip1.Dock = DockStyle.Bottom;
             menuStrip1.Items.AddRange(new ToolStripItem[] { toolsmenu });
-            menuStrip1.Location = new Point(0, 597);
+            menuStrip1.Location = new Point(0, 591);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1000, 53);
+            menuStrip1.Padding = new Padding(5);
+            menuStrip1.Size = new Size(1000, 59);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "Dock";
             // 
