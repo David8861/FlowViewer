@@ -74,10 +74,12 @@ namespace FlowViewer
             // 
             filemenu.DropDownItems.AddRange(new ToolStripItem[] { toolOpen, fileseperate, toolSave, fileseperate2, toolExit });
             filemenu.Font = new Font("Georgia", 9.75F);
-            filemenu.ForeColor = Color.White;
+            filemenu.ForeColor = Color.Black;
+            filemenu.ImageTransparentColor = SystemColors.ActiveBorder;
             filemenu.Name = "filemenu";
             filemenu.Size = new Size(42, 20);
             filemenu.Text = "File";
+            filemenu.Click += filemenu_Click;
             // 
             // toolOpen
             // 
@@ -86,6 +88,7 @@ namespace FlowViewer
             toolOpen.Size = new Size(180, 22);
             toolOpen.Text = "Open";
             toolOpen.Click += toolOpen_Click;
+            toolOpen.ImageScaling = ToolStripItemImageScaling.SizeToFit;
             // 
             // fileseperate
             // 
@@ -99,6 +102,7 @@ namespace FlowViewer
             toolSave.Size = new Size(180, 22);
             toolSave.Text = "Save";
             toolSave.Click += toolSave_Click;
+            toolSave.ImageScaling = ToolStripItemImageScaling.SizeToFit;
             // 
             // fileseperate2
             // 
@@ -112,12 +116,13 @@ namespace FlowViewer
             toolExit.Size = new Size(180, 22);
             toolExit.Text = "Exit";
             toolExit.Click += toolExit_Click;
+            toolExit.ImageScaling = ToolStripItemImageScaling.SizeToFit;
             // 
             // viewmenu
             // 
             viewmenu.DropDownItems.AddRange(new ToolStripItem[] { bigger, toolStripSeparator1, smaller, toolStripSeparator2, reset });
             viewmenu.Font = new Font("Georgia", 9.75F);
-            viewmenu.ForeColor = Color.White;
+            viewmenu.ForeColor = Color.Black;
             viewmenu.Name = "viewmenu";
             viewmenu.Size = new Size(50, 20);
             viewmenu.Text = "View";
@@ -126,32 +131,34 @@ namespace FlowViewer
             // 
             bigger.Image = (Image)resources.GetObject("bigger.Image");
             bigger.Name = "bigger";
-            bigger.Size = new Size(180, 22);
+            bigger.Size = new Size(121, 22);
             bigger.Text = "Bigger";
             bigger.Click += bigger_Click;
+            bigger.ImageScaling = ToolStripItemImageScaling.SizeToFit;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(118, 6);
             // 
             // smaller
             // 
             smaller.Image = (Image)resources.GetObject("smaller.Image");
             smaller.Name = "smaller";
-            smaller.Size = new Size(180, 22);
+            smaller.Size = new Size(121, 22);
             smaller.Text = "Smaller";
             smaller.Click += smaller_Click;
+            smaller.ImageScaling = ToolStripItemImageScaling.SizeToFit;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(118, 6);
             // 
             // reset
             // 
             reset.Name = "reset";
-            reset.Size = new Size(180, 22);
+            reset.Size = new Size(121, 22);
             reset.Text = "Reset";
             reset.Click += reset_Click;
             // 
@@ -159,7 +166,7 @@ namespace FlowViewer
             // 
             aboutmenu.Alignment = ToolStripItemAlignment.Right;
             aboutmenu.Font = new Font("Georgia", 9.75F);
-            aboutmenu.ForeColor = Color.White;
+            aboutmenu.ForeColor = Color.Black;
             aboutmenu.Name = "aboutmenu";
             aboutmenu.Size = new Size(58, 20);
             aboutmenu.Text = "About";
@@ -194,15 +201,17 @@ namespace FlowViewer
             // 
             drawpen.Image = (Image)resources.GetObject("drawpen.Image");
             drawpen.Name = "drawpen";
-            drawpen.Size = new Size(180, 22);
+            drawpen.Size = new Size(144, 22);
             drawpen.Text = "Pen";
+            drawpen.ImageScaling = ToolStripItemImageScaling.SizeToFit;
             // 
             // highlight
             // 
             highlight.Image = (Image)resources.GetObject("highlight.Image");
             highlight.Name = "highlight";
-            highlight.Size = new Size(180, 22);
+            highlight.Size = new Size(144, 22);
             highlight.Text = "Highlighter";
+            highlight.ImageScaling = ToolStripItemImageScaling.SizeToFit;
             // 
             // Form1
             // 

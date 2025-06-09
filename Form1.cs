@@ -107,7 +107,7 @@ namespace FlowViewer
             ScrollBars = ScrollBars.Vertical;
         }
 
-        
+
         private void SelectButton_Click(object sender, EventArgs e)
         {
             if (openFileDialog.ShowDialog() == DialogResult)
@@ -117,8 +117,8 @@ namespace FlowViewer
                     var sr = new StreamReader(openFileDialog.FileName);
 
                     var data = sr.ReadToEnd();
-                    
-                    
+
+
 
 
                 }
@@ -130,10 +130,14 @@ namespace FlowViewer
             }
         }
 
-        
+
         private System.Windows.Forms.TextBox mytext;
         OpenFileDialog openFileDialog = new OpenFileDialog();
-        
+
+        private void filemenu_Click(object sender, EventArgs e)
+        {
+
+        }
 
         public ScrollBars ScrollBars { get; private set; }
         public DialogResult SelectButton { get; private set; }
