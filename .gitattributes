@@ -2,7 +2,7 @@
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
 * text=auto
-
+FlowViewer/Form1.Designer.cs linguist-generated = true
 ###############################################################################
 # Set default behavior for command prompt diff.
 #
