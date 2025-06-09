@@ -38,23 +38,15 @@ namespace FlowViewer
             topmenu = new MenuStrip();
 
             // Assign new toolstrip functions for the toolbar
-            filemenu = new ToolStripMenuItem();
-            toolOpen = new ToolStripMenuItem();
-            toolSave = new ToolStripMenuItem();
-            toolExit = new ToolStripMenuItem();
-            viewmenu = new ToolStripMenuItem();
-            bigger = new ToolStripMenuItem();
-            smaller = new ToolStripMenuItem();
-            reset = new ToolStripMenuItem();
-            aboutmenu = new ToolStripMenuItem();
+            filemenu = new ToolStripMenuItem(); toolOpen = new ToolStripMenuItem(); toolSave = new ToolStripMenuItem();
+            toolExit = new ToolStripMenuItem(); viewmenu = new ToolStripMenuItem(); bigger = new ToolStripMenuItem();
+            smaller = new ToolStripMenuItem(); reset = new ToolStripMenuItem(); aboutmenu = new ToolStripMenuItem();
             toolsmenu = new ToolStripMenuItem();
 
             // Seperates toolstrip functions from eachother
-            fileseperate = new ToolStripSeparator();
-            fileseperate2 = new ToolStripSeparator();
-            toolStripSeparator1 = new ToolStripSeparator();
-            toolStripSeparator2 = new ToolStripSeparator();
-            toolStripSeparator3 = new ToolStripSeparator();
+            fileseperate = new ToolStripSeparator(); fileseperate2 = new ToolStripSeparator(); toolStripSeparator1 = new ToolStripSeparator();
+            toolStripSeparator2 = new ToolStripSeparator(); toolStripSeparator3 = new ToolStripSeparator();
+            
 
             // Create menu for Tools
             menuStrip1 = new MenuStrip();
@@ -222,9 +214,8 @@ namespace FlowViewer
         // Create menu, item and seperator classes for Flow Viewer
         private MenuStrip topmenu, menuStrip1;
 
-        private ToolStripMenuItem filemenu, viewmenu, aboutmenu, toolOpen, toolSave, toolExit;
-        private ToolStripMenuItem bigger, smaller, reset, toolsmenu, drawpen, highlight;
-
+        private ToolStripMenuItem filemenu, viewmenu, aboutmenu, toolOpen, toolSave, toolExit, bigger, smaller, reset, toolsmenu, drawpen, highlight;
+        
         private ToolStripSeparator fileseperate, fileseperate2, toolStripSeparator1, toolStripSeparator2, toolStripSeparator3;
       
     }
