@@ -24,7 +24,7 @@ namespace FlowViewer
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        
 
         /// <summary>
         ///  Required method for Designer support - do not modify
@@ -229,8 +229,7 @@ namespace FlowViewer
             PerformLayout();
         }
 
-        #endregion
-
+        
 
         private MenuStrip topmenu;
         private ToolStripMenuItem filemenu;
