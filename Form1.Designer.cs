@@ -107,6 +107,7 @@ namespace FlowViewer
             // 
             fileseperate2.Name = "fileseperate2";
             fileseperate2.Size = new Size(177, 6);
+            //
             // 
             // toolExit
             toolExit.Image = (Image)resources.GetObject("toolExit.Image");
