@@ -51,8 +51,8 @@ namespace FlowViewer
             toolStripSeparator3 = new ToolStripSeparator();
             menuStrip1 = new MenuStrip();
             toolsmenu = new ToolStripMenuItem();
-            highlight = new ToolStripMenuItem();
             drawpen = new ToolStripMenuItem();
+            highlight = new ToolStripMenuItem();
             topmenu.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -66,17 +66,18 @@ namespace FlowViewer
             topmenu.Location = new Point(0, 0);
             topmenu.Name = "topmenu";
             topmenu.Padding = new Padding(10);
-            topmenu.Size = new Size(1000, 39);
+            topmenu.Size = new Size(1000, 40);
             topmenu.TabIndex = 3;
             topmenu.Text = "Menu";
             // 
             // filemenu
             // 
             filemenu.DropDownItems.AddRange(new ToolStripItem[] { toolOpen, fileseperate, toolSave, fileseperate2, toolExit });
+            filemenu.Font = new Font("Georgia", 9.75F);
+            filemenu.ForeColor = Color.White;
             filemenu.Name = "filemenu";
-            filemenu.Size = new Size(37, 19);
+            filemenu.Size = new Size(42, 20);
             filemenu.Text = "File";
-            filemenu.ForeColor = System.Drawing.Color.White;
             // 
             // toolOpen
             // 
@@ -115,10 +116,11 @@ namespace FlowViewer
             // viewmenu
             // 
             viewmenu.DropDownItems.AddRange(new ToolStripItem[] { bigger, toolStripSeparator1, smaller, toolStripSeparator2, reset });
+            viewmenu.Font = new Font("Georgia", 9.75F);
+            viewmenu.ForeColor = Color.White;
             viewmenu.Name = "viewmenu";
-            viewmenu.Size = new Size(44, 19);
+            viewmenu.Size = new Size(50, 20);
             viewmenu.Text = "View";
-            viewmenu.ForeColor = System.Drawing.Color.White;
             // 
             // bigger
             // 
@@ -156,47 +158,51 @@ namespace FlowViewer
             // aboutmenu
             // 
             aboutmenu.Alignment = ToolStripItemAlignment.Right;
+            aboutmenu.Font = new Font("Georgia", 9.75F);
+            aboutmenu.ForeColor = Color.White;
             aboutmenu.Name = "aboutmenu";
-            aboutmenu.Size = new Size(52, 19);
+            aboutmenu.Size = new Size(58, 20);
             aboutmenu.Text = "About";
-            aboutmenu.ForeColor = System.Drawing.Color.White;
             aboutmenu.Click += aboutmenu_Click;
             // 
             // toolStripSeparator3
             // 
             toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(131, 6);
+            toolStripSeparator3.Size = new Size(141, 6);
             // 
             // menuStrip1
             // 
             menuStrip1.Dock = DockStyle.Bottom;
             menuStrip1.Items.AddRange(new ToolStripItem[] { toolsmenu });
-            menuStrip1.Location = new Point(0, 591);
+            menuStrip1.Location = new Point(0, 590);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5);
-            menuStrip1.Size = new Size(1000, 59);
+            menuStrip1.Size = new Size(1000, 60);
             menuStrip1.TabIndex = 4;
             menuStrip1.Text = "Dock";
             // 
             // toolsmenu
             // 
-            toolsmenu.DropDownItems.AddRange(new ToolStripItem[] { highlight, toolStripSeparator3, drawpen });
+            toolsmenu.DropDownItems.AddRange(new ToolStripItem[] { drawpen, toolStripSeparator3, highlight });
+            toolsmenu.Font = new Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             toolsmenu.Name = "toolsmenu";
             toolsmenu.Padding = new Padding(0, 15, 0, 15);
-            toolsmenu.Size = new Size(39, 49);
+            toolsmenu.Size = new Size(45, 50);
             toolsmenu.Text = "Tools";
-            // 
-            // highlight
-            // 
-            highlight.Name = "highlight";
-            highlight.Size = new Size(134, 22);
-            highlight.Text = "Highlighter";
             // 
             // drawpen
             // 
+            drawpen.Image = (Image)resources.GetObject("drawpen.Image");
             drawpen.Name = "drawpen";
-            drawpen.Size = new Size(134, 22);
+            drawpen.Size = new Size(180, 22);
             drawpen.Text = "Pen";
+            // 
+            // highlight
+            // 
+            highlight.Image = (Image)resources.GetObject("highlight.Image");
+            highlight.Name = "highlight";
+            highlight.Size = new Size(180, 22);
+            highlight.Text = "Highlighter";
             // 
             // Form1
             // 
