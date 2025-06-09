@@ -229,8 +229,6 @@ namespace FlowViewer
             PerformLayout();
         }
 
-        
-
         private MenuStrip topmenu;
         private ToolStripMenuItem filemenu;
         private ToolStripMenuItem viewmenu;
