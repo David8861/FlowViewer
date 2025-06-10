@@ -1,5 +1,6 @@
 using FlowViewer.Properties;
 using System;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing.Design;
 using System.Drawing.Text;
 using System.IO;
@@ -57,18 +58,26 @@ namespace FlowViewer
 
         private void drawpen_Click(object sender, EventArgs e)
         {
-            drawpen.Select();
+
+            Cursor = new Cursor("C:\\repos\\FlowViewer\\Cursor1.cur");
+            Cursor.Show();
+
             
-            
+
         }
 
         private void highlight_Click(object sender, EventArgs e)
         {
 
-
+            
 
         }
 
+        private void reset2_Click(object sender, EventArgs e)
+        {
+
+
+        }
 
         private void bigger_Click(object sender, EventArgs e)
         {

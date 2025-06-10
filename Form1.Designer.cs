@@ -41,12 +41,13 @@ namespace FlowViewer
             filemenu = new ToolStripMenuItem(); toolOpen = new ToolStripMenuItem(); toolSave = new ToolStripMenuItem();
             toolExit = new ToolStripMenuItem(); viewmenu = new ToolStripMenuItem(); bigger = new ToolStripMenuItem();
             smaller = new ToolStripMenuItem(); reset = new ToolStripMenuItem(); aboutmenu = new ToolStripMenuItem();
+            reset2 = new ToolStripMenuItem();
             toolsmenu = new ToolStripMenuItem();
 
             // Seperates toolstrip functions from eachother
             fileseperate = new ToolStripSeparator(); fileseperate2 = new ToolStripSeparator(); toolStripSeparator1 = new ToolStripSeparator();
             toolStripSeparator2 = new ToolStripSeparator(); toolStripSeparator3 = new ToolStripSeparator();
-            
+            toolStripSeparator4 = new ToolStripSeparator();
 
             // Create menu for Tools
             menuStrip1 = new MenuStrip();
@@ -141,11 +142,17 @@ namespace FlowViewer
             toolStripSeparator2.Name = "toolStripSeparator2";
             toolStripSeparator2.Size = new Size(177, 6);
             
-            // Defines reset back to original window size
+            // Define reset for original window size
             reset.Name = "reset";
             reset.Size = new Size(180, 22);
             reset.Text = "Reset";
             reset.Click += reset_Click;
+
+            // Define reset for tools menu
+            reset2.Name = "reset";
+            reset2.Size = new Size(180, 22);
+            reset2.Text = "Reset";
+            reset2.Click += reset2_Click;
             
             // Define about menu attributes
             aboutmenu.Alignment = ToolStripItemAlignment.Right;
@@ -159,7 +166,11 @@ namespace FlowViewer
             // Seperate menu items
             toolStripSeparator3.Name = "toolStripSeparator3";
             toolStripSeparator3.Size = new Size(141, 6);
-            
+
+            // Seperate tool items
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            toolStripSeparator4.Size = new Size(141, 6);
+
             // Creates and defines toolbar dock
             menuStrip1.Dock = DockStyle.Bottom;
             menuStrip1.Items.AddRange(new ToolStripItem[] { toolsmenu });
@@ -171,7 +182,7 @@ namespace FlowViewer
             menuStrip1.Text = "Dock";
             
             // Create and assign tools menu attributes
-            toolsmenu.DropDownItems.AddRange(new ToolStripItem[] { drawpen, toolStripSeparator3, highlight });
+            toolsmenu.DropDownItems.AddRange(new ToolStripItem[] { drawpen, toolStripSeparator3, highlight, toolStripSeparator4, reset2 });
             toolsmenu.Font = new Font("Georgia", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             toolsmenu.Name = "toolsmenu";
             toolsmenu.Padding = new Padding(0, 15, 0, 15);
@@ -214,9 +225,9 @@ namespace FlowViewer
         // Create menu, item and seperator classes for Flow Viewer
         private MenuStrip topmenu, menuStrip1;
 
-        private ToolStripMenuItem filemenu, viewmenu, aboutmenu, toolOpen, toolSave, toolExit, bigger, smaller, reset, toolsmenu, drawpen, highlight;
+        private ToolStripMenuItem filemenu, viewmenu, aboutmenu, toolOpen, toolSave, toolExit, bigger, smaller, reset, reset2, toolsmenu, drawpen, highlight;
         
-        private ToolStripSeparator fileseperate, fileseperate2, toolStripSeparator1, toolStripSeparator2, toolStripSeparator3;
+        private ToolStripSeparator fileseperate, fileseperate2, toolStripSeparator1, toolStripSeparator2, toolStripSeparator3, toolStripSeparator4;
       
     }
 }
