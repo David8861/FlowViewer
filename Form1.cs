@@ -37,7 +37,7 @@ namespace FlowViewer
 
             aboutwindowform.Text = "About Flow";
             aboutwindowform.Location = new Point(300, 200);
-            aboutwindowform.Size = new Size(600, 350);
+            aboutwindowform.Size = new Size(500, 300);
             aboutwindowform.ShowIcon = true;
             aboutwindowform.Icon = Icon;
 
@@ -50,7 +50,7 @@ namespace FlowViewer
             windowformbox.Name = "About Flow";
             windowformbox.Location = new Point(5, 5);
             windowformbox.Height = 325;
-            windowformbox.Width = 570;
+            windowformbox.Width = 480;
             windowformbox.WordWrap = true;
             windowformbox.BackColor = SystemColors.Menu;
             windowformbox.Show();
@@ -97,7 +97,7 @@ namespace FlowViewer
         }
         private void toolExit_Click(object sender, EventArgs e)
         {
-
+            
             Application.Exit();
 
         }
