@@ -69,13 +69,14 @@ namespace FlowViewer
         private void highlight_Click(object sender, EventArgs e)
         {
 
-            
-
+            Cursor = new Cursor("C:\\repos\\FlowViewer\\Cursor2.cur");
+            Cursor.Show();
         }
 
         private void reset2_Click(object sender, EventArgs e)
         {
 
+            Cursor = DefaultCursor;
 
         }
 
@@ -129,17 +130,9 @@ namespace FlowViewer
             ScrollBars = new ScrollBars();
             ScrollBars = ScrollBars.Vertical;
 
-            try
-            {
-
-                var sr = new StreamReader(openFileDialog.FileName);
-                var data = sr.ReadToEnd();
-            }
-            catch (SecurityException ex)
-            {
-                MessageBox.Show($"Security error.\n\nError message: {ex.Message}\n\n" +
-                $"Details:\n\n{ex.StackTrace}");
-            }
+            var sr = new StreamReader(openFileDialog.OpenFile());
+            var data = sr.ReadToEnd();
+            
         }
 
         OpenFileDialog openFileDialog = new OpenFileDialog();
