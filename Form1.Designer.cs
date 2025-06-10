@@ -80,7 +80,7 @@ namespace FlowViewer
             filemenu.Name = "filemenu";
             filemenu.Size = new Size(42, 20);
             filemenu.Text = "File";
-            filemenu.Click += filemenu_Click;
+           
             
             // Define Open function attributes and mouse click reference
             toolOpen.Image = (Image)resources.GetObject("toolOpen.Image");

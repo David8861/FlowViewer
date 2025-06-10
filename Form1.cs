@@ -57,8 +57,9 @@ namespace FlowViewer
 
         private void drawpen_Click(object sender, EventArgs e)
         {
+            drawpen.Select();
             
-
+            
         }
 
         private void highlight_Click(object sender, EventArgs e)
@@ -113,47 +114,27 @@ namespace FlowViewer
 
             openFileDialog.Title = "Open Doc";
             openFileDialog.Multiselect = false;
-            openFileDialog.SelectReadOnly = false;
             openFileDialog.DefaultExt = ".pdf";
-            DialogResult = openFileDialog.ShowDialog();
+            openFileDialog.ShowDialog();
 
             ScrollBars = new ScrollBars();
             ScrollBars = ScrollBars.Vertical;
-        }
 
-
-        private void SelectButton_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog.ShowDialog() == DialogResult)
+            try
             {
-                try
-                {
-                    var sr = new StreamReader(openFileDialog.FileName);
 
-                    var data = sr.ReadToEnd();
-
-
-
-
-                }
-                catch (SecurityException ex)
-                {
-                    MessageBox.Show($"Security error.\n\nError message: {ex.Message}\n\n" +
-                    $"Details:\n\n{ex.StackTrace}");
-                }
+                var sr = new StreamReader(openFileDialog.FileName);
+                var data = sr.ReadToEnd();
+            }
+            catch (SecurityException ex)
+            {
+                MessageBox.Show($"Security error.\n\nError message: {ex.Message}\n\n" +
+                $"Details:\n\n{ex.StackTrace}");
             }
         }
 
-
-        private System.Windows.Forms.TextBox mytext;
         OpenFileDialog openFileDialog = new OpenFileDialog();
 
-        private void filemenu_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public ScrollBars ScrollBars { get; private set; }
-        public DialogResult SelectButton { get; private set; }
     }
 }
